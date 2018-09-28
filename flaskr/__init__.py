@@ -33,7 +33,7 @@ def creatapp(test_config=None):
     else:
         app.config.from_mapping(test_config)
     try:
-        os.mkdir(app.instance_path)
+        os.makedirs(app.instance_path)
     except OSError:
         pass
 
